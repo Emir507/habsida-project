@@ -1,0 +1,293 @@
+@font-face {
+	font-family: "TTLakesRegular";
+	src: url('./assets/fonts/TTLakes-Regular.ttf') format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "TTLakesBold";
+	src: url('./assets/fonts/TTLakes-Bold.ttf') format("truetype");
+	font-style: normal;
+	font-weight: normal;
+}
+
+body {
+	margin: 0;
+	font-family: "TTLakesRegular";
+	background-color: #F8F8F8;
+	position: relative;
+}
+
+.overlay:before {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100vh;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.6);
+	z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+	margin: 0;
+}
+
+button {
+	border: none;
+	outline: none;
+	background-color: transparent;
+}
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+}
+
+.content__image {
+	width: 100%;
+
+}
+
+.header {
+	background-color: #fff;
+}
+
+.sidebar {
+	box-shadow: 6px 0px 19px 0px rgba(0, 0, 0, 0.4);
+	position: fixed;
+	top: 0;
+	left: 0;
+	transform: translateX(-100%);
+	height: 100%;
+	width: 320px;
+	background-color: white;
+	z-index: 1;
+}
+
+.sidebar--close {
+	cursor: pointer;
+}
+
+.sidebar-slide-in {
+	animation: slide-in 1s ease forwards;
+}
+
+.sidebar-slide-out {
+	animation: slide-out 1s ease forwards;
+}
+
+@keyframes slide-in {
+	from {
+		transform: translateX(-100%);
+	}
+
+	to {
+		transform: translateX(0);
+	}
+}
+
+@keyframes slide-out {
+	from {
+		transform: translateX(0);
+	}
+
+	to {
+		transform: translateX(-100%);
+	}
+}
+
+.header__nav {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 25px;
+}
+
+.nav__left-block {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.nav__right-block {
+	display: flex;
+}
+
+.nav__right-block .nav-link {
+	position: relative;
+	padding-left: 15px;
+}
+
+.nav__right-block .nav-link .nav-link__link {
+	margin: 0;
+}
+
+.nav__right-block .nav-link:nth-child(4)::before {
+	content: '';
+	border: 1px solid #EAEAEA;
+	border-radius: 2px;
+	position: absolute;
+	left: 0;
+	height: 100%;
+}
+
+.nav-link button {
+	cursor: pointer;
+}
+
+.nav-link .nav-link__link {
+	display: flex;
+	margin-right: 15px;
+	border-radius: 50%;
+	width: 40px;
+	height: 40px;
+	background-color: #FF3E79;
+	justify-content: center;
+	align-items: center;
+
+}
+
+.main {
+	padding: 24px;
+}
+
+.main__title {
+	margin-bottom: 32px;
+	font-family: "TTLakesBold";
+	font-size: 28px;
+	padding-left: 24px;
+	position: relative;
+	margin-left: -24px;
+}
+
+.main__title::before {
+	content: '';
+	border-left: 4px solid #41F6D7;
+	border-top-right-radius: 4px;
+	border-bottom-right-radius: 4px;
+	position: absolute;
+	left: 0;
+	height: 100%;
+}
+
+.main__service-list {
+	display: flex;
+	margin-bottom: 32px;
+	overflow: scroll;
+}
+
+.service-list__item {
+	padding: 8px 22px;
+	border: 2px solid transparent;
+	border-radius: 6px;
+	cursor: pointer;
+	white-space: nowrap;
+
+}
+
+.service-list__item--active {
+	background-color: #fff;
+	border-color: #B8FFEC;
+}
+
+.service-list__item:hover {
+	background-color: #fff;
+}
+
+.content__text {
+	font-size: 14px;
+}
+
+.content__text:first-child {
+	margin-bottom: 24px;
+}
+
+.content__text--2,
+.content__text--3 {
+	display: none;
+}
+
+.main__content div {
+	margin-bottom: 14px;
+}
+
+.main__content section {
+	margin-bottom: 24px;
+}
+
+.button {
+	cursor: pointer;
+}
+
+.button img {
+	margin-right: 8px;
+}
+
+.no-on-mobile {
+	display: none;
+}
+
+.nav-link span {
+	display: none;
+}
+
+
+/* for tablet */
+@media (min-width:768px) {
+	.no-on-mobile {
+		display: block;
+	}
+
+	.nav-link:nth-child(3) {
+		padding-right: 15px;
+	}
+
+	.main__content {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
+		gap: 36px;
+	}
+
+	.content__image {
+		border-radius: 10px;
+	}
+
+	.content__text--2 {
+		display: block;
+	}
+}
+
+/* for PC */
+@media (min-width:1120px) {
+	.main__service-list {
+		flex-wrap: wrap;
+		overflow: unset;
+	}
+
+	.content__text--3 {
+		display: block;
+	}
+
+	.nav-link {
+		display: flex;
+		align-items: center;
+	}
+
+	.nav-link span {
+		margin-right: 8px;
+		display: inline;
+	}
+
+	.no-on-mobile {
+		display: none;
+	}
+}
