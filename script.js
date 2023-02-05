@@ -8,7 +8,7 @@ function toggleSidebar() {
   toggleOverlay();
 }
 function toggleOverlay() {
-  document.body.classList.toggle("overlay");
+  body.classList.toggle("overlay");
 }
 function hideSidebarAndOverlayOnVoidClick(e) {
   if (e.target.classList.contains("overlay")) {
@@ -17,17 +17,9 @@ function hideSidebarAndOverlayOnVoidClick(e) {
 }
 function toggleOnOverlayClickEvent() {
   if (sidebar.classList.contains("sidebar--visible")) {
-    document.body.addEventListener(
-      "click",
-      hideSidebarAndOverlayOnVoidClick,
-      true
-    );
+    body.addEventListener("click", hideSidebarAndOverlayOnVoidClick, true);
   } else {
-    document.body.removeEventListener(
-      "click",
-      hideSidebarAndOverlayOnVoidClick,
-      true
-    );
+    body.removeEventListener("click", hideSidebarAndOverlayOnVoidClick, true);
   }
 }
 
