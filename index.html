@@ -1,60 +1,132 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>CPS</title>
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="stylesheet" href="style.css" />
-  <title>CPS</title>
-</head>
+  <body>
+    <header class="header">
+      <nav class="header__nav">
+        <aside class="sidebar">
+          <div style="margin-bottom: 100px">
+            <header class="sidebar__buttons">
+              <div style="display: flex">
+                <div class="nav-link">
+                  <button class="close-menu-btn nav-link__link">
+                    <img src="./assets/images/icons/cross-icon.svg" alt="" />
+                  </button>
+                </div>
+                <div>
+                  <a href="#">
+                    <img src="./assets/images/icons/logo2.svg" alt="logo" />
+                  </a>
+                </div>
+              </div>
+              <div class="nav-link">
+                <button class="nav-link__link" style="margin: 0">
+                  <img
+                    src="./assets/images/icons/sidebar-search.svg"
+                    alt="search"
+                  />
+                </button>
+              </div>
+            </header>
+            <ul class="sidebar__menu">
+              <li class="menu--active">Ремонт техники</li>
+              <li>Услуги и сервисы</li>
+              <li>Корпоративным клиентам</li>
+              <li>Продавцам техники</li>
+              <li>Партнерам</li>
+              <li>Производителям</li>
+              <li>Наши сервисные центры</li>
+              <li>Контакты</li>
+            </ul>
+          </div>
+          <footer class="sidebar__footer">
+            <ul class="footer__buttons">
+              <li class="nav-link">
+                <button class="nav-link__link">
+                  <img src="./assets/images/icons/phone.svg" />
+                </button>
+              </li>
+              <li class="nav-link">
+                <button class="nav-link__link">
+                  <img src="./assets/images/icons/message.svg" />
+                </button>
+              </li>
+              <li class="nav-link">
+                <button class="nav-link__link">
+                  <img src="./assets/images/icons/user.svg" />
+                </button>
+              </li>
+            </ul>
 
-<body>
-  <header class="header">
-    <nav class="header__nav">
-      <div class="nav__left-block">
-        <div class="nav-link">
-          <button class="nav-link__link burger-menu">
-            <img src="./assets/images/icons/burger.svg" alt="burger icon" />
-          </button>
+            <div class="footer__contacts">
+              <a class="contacts__mail"> mail@cps.com</a>
+              <!-- <br /> -->
+              <a class="contacts__phone">8 800 890 8900</a>
+            </div>
+
+            <div class="language-buttons">
+              <button class="language-buttons--active">RU</button>
+              <button>EN</button>
+              <button>CH</button>
+            </div>
+          </footer>
+        </aside>
+        <div class="nav__left-block">
+          <div class="nav-link">
+            <button class="nav-link__link burger-menu">
+              <img src="./assets/images/icons/burger.svg" alt="burger icon" />
+            </button>
+          </div>
+          <div>
+            <a href="#"><img src="./assets/images/icons/logo.svg" alt="" /></a>
+          </div>
         </div>
-        <div>
-          <a href="#"><img src="./assets/images/icons/logo.svg" alt="" /></a>
-        </div>
-      </div>
 
-      <ul class="nav__right-block">
-        <li class="nav-link no-on-mobile">
-          <a class="nav-link__link" href="#">
-            <img src="./assets/images/icons/phone.svg" alt="phone icon" />
-          </a>
-        </li>
-        <li class="nav-link no-on-mobile">
-          <a class="nav-link__link" href="#">
-            <img src="./assets/images/icons/message.svg" alt="message icon" />
-          </a>
-        </li>
-        <li class="nav-link no-on-mobile">
-          <a class="nav-link__link" href="#">
-            <img src="./assets/images/icons/user.svg" alt="user icon" />
-          </a>
-        </li>
-        <li class="nav-link">
-          <span>Оставить заявку</span>
-          <a class="nav-link__link" href="#">
-            <img src="./assets/images/icons/settings.svg" alt="settings icon" />
-          </a>
-        </li>
-        <li class="nav-link">
-          <span>Статус ремонта</span>
-          <a class="nav-link__link" href="#">
-            <img src="./assets/images/icons/search.svg" alt="search.svg icon" />
-          </a>
-        </li>
-      </ul>
-    </nav>
+        <ul class="nav__right-block">
+          <li class="nav-link no-on-mobile">
+            <a class="nav-link__link" href="#">
+              <img src="./assets/images/icons/phone.svg" alt="phone icon" />
+            </a>
+          </li>
+          <li class="nav-link no-on-mobile">
+            <a class="nav-link__link" href="#">
+              <img src="./assets/images/icons/message.svg" alt="message icon" />
+            </a>
+          </li>
+          <li class="nav-link no-on-mobile">
+            <a class="nav-link__link" href="#">
+              <img src="./assets/images/icons/user.svg" alt="user icon" />
+            </a>
+          </li>
+          <li class="nav-link">
+            <span>Оставить заявку</span>
+            <a class="nav-link__link" href="#">
+              <img
+                src="./assets/images/icons/settings.svg"
+                alt="settings icon"
+              />
+            </a>
+          </li>
+          <li class="nav-link">
+            <span>Статус ремонта</span>
+            <a class="nav-link__link" href="#">
+              <img
+                src="./assets/images/icons/search.svg"
+                alt="search.svg icon"
+              />
+            </a>
+          </li>
+        </ul>
+      </nav>
 
-
+      <!-- 
 
     <aside class="sidebar">
       <button class="sidebar--close">Закрыть</button>
@@ -66,49 +138,52 @@
         <li>item</li>
         <li>item</li>
       </ul>
-    </aside>
-  </header>
-  <main class="main">
-    <h1 class="main__title">Услуги и сервисы</h1>
+    </aside> -->
+    </header>
+    <main class="main">
+      <h1 class="main__title">Услуги и сервисы</h1>
 
-    <ul class="main__service-list">
-      <li class="service-list__item service-list__item--active">
-        Ремонтируемые бренды
-      </li>
-      <li class="service-list__item">Ремонтируемые устройства</li>
-      <li class="service-list__item">Цены на услуги</li>
-      <li class="service-list__item">Адреса сервисных центров</li>
-      <li class="service-list__item">Специальные цены</li>
-      <li class="service-list__item">Отзывы</li>
-    </ul>
+      <ul class="main__service-list">
+        <li class="service-list__item service-list__item--active">
+          Ремонтируемые бренды
+        </li>
+        <li class="service-list__item">Ремонтируемые устройства</li>
+        <li class="service-list__item">Цены на услуги</li>
+        <li class="service-list__item">Адреса сервисных центров</li>
+        <li class="service-list__item">Специальные цены</li>
+        <li class="service-list__item">Отзывы</li>
+      </ul>
 
-    <div class="main__content">
-      <section>
-        <div>
-          <p class="content__text content__text--1">
-            Мы являемся авторизованным сервисным центром по ремонту техники
-            Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
-            официальной гарантией производителя.
-          </p>
+      <div class="main__content">
+        <section>
+          <div>
+            <p class="content__text content__text--1">
+              Мы являемся авторизованным сервисным центром по ремонту техники
+              Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с
+              официальной гарантией производителя.
+            </p>
 
-          <p class="content__text content__text--2">
-            Мы успешно работаем с 1992 года и заслужили репутацию надежного
-            партнера, что подтверждает большое количество постоянных клиентов.
-          </p>
-          <p class="content__text content__text--3">
-            Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
-            очередь, советуют нас родным и близким.
-          </p>
-        </div>
-        <button class="button">
-          <img src="./assets/images/icons/double-arrow.svg" alt="" />
-          <span>Читать далее</span>
-        </button>
-      </section>
-      <img class="content__image" src="./assets/images/content-image.png" alt="CPS" />
-    </div>
-  </main>
-  <script src="script.js"></script>
-</body>
-
+            <p class="content__text content__text--2">
+              Мы успешно работаем с 1992 года и заслужили репутацию надежного
+              партнера, что подтверждает большое количество постоянных клиентов.
+            </p>
+            <p class="content__text content__text--3">
+              Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою
+              очередь, советуют нас родным и близким.
+            </p>
+          </div>
+          <button class="button">
+            <img src="./assets/images/icons/double-arrow.svg" alt="" />
+            <span>Читать далее</span>
+          </button>
+        </section>
+        <img
+          class="content__image"
+          src="./assets/images/content-image.png"
+          alt="CPS"
+        />
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
 </html>
